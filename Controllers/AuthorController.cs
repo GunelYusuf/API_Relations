@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Web_API_Relations.AuthorDto;
 using Web_API_Relations.Data.DAL;
 using Web_API_Relations.Data.Entity;
 
@@ -29,7 +31,7 @@ namespace Web_API_Relations.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public IActionResult Get([FromBody]int id)
         {
             if (id == null) return NotFound();
             Author dbAuthor = _context.Authors.FirstOrDefault(a => a.Id == id);
@@ -39,28 +41,28 @@ namespace Web_API_Relations.Controllers
         }
 
         // POST api/values
-        [HttpPost]
-        public IActionResult Create(Author author)
+        [HttpPost("create")]
+        public IActionResult Create([FromBody]AuthorCreateDto authorCreateDto)
         {
-            bool isExist = _context.Authors.Any(a => a.Name.ToLower().Trim() == author.Name.ToLower().Trim());
+            bool isExist = _context.Authors.Any(a => a.Name.ToLower().Trim() == authorCreateDto.Name.ToLower().Trim());
             if (isExist)
             {
                 return StatusCode(401);
             }
             Author newAuthor = new Author
             {
-                Name = author.Name,
-                LastName=author.LastName,
-                Age =author.Age,
+                Name = authorCreateDto.Name,
+                LastName= authorCreateDto.LastName,
+                Age = authorCreateDto.Age,
             };
-            _context.Authors.Add(author);
+            _context.Authors.Add(newAuthor);
             _context.SaveChanges();
             return StatusCode(201);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult Update(int id,Author author)
+        public IActionResult Update([FromForm]int id,Author author)
         {
             Author dbAuthor = _context.Authors.Where(a => a.Id == id).FirstOrDefault();
             if (dbAuthor == null) NotFound();
@@ -74,7 +76,7 @@ namespace Web_API_Relations.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromBody]int id)
         {
             if (id == null) return NotFound();
             Author dbAuthor = _context.Authors.FirstOrDefault(a => a.Id == id);

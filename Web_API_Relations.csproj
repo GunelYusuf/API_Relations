@@ -15,6 +15,7 @@
     <None Remove="Microsoft.Extensions.DependencyInjection" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Data\Migrations\" />
+    <None Remove="AuthorDto\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
@@ -34,5 +35,6 @@
     <Folder Include="Data\DAL\" />
     <Folder Include="Data\Entity\" />
     <Folder Include="Data\Migrations\" />
+    <Folder Include="AuthorDto\" />
   </ItemGroup>
 </Project>
