@@ -10,7 +10,7 @@ using Web_API_Relations.Data.Entity;
 
 namespace Web_API_Relations.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class AuthorController : Controller
     {
         private readonly Context _context;
@@ -52,7 +52,6 @@ namespace Web_API_Relations.Controllers
                 Name = author.Name,
                 LastName=author.LastName,
                 Age =author.Age,
-                
             };
             _context.Authors.Add(author);
             _context.SaveChanges();
@@ -80,6 +79,9 @@ namespace Web_API_Relations.Controllers
             if (id == null) return NotFound();
             Author dbAuthor = _context.Authors.FirstOrDefault(a => a.Id == id);
             if (dbAuthor == null) return NotFound();
+
+            var bookRelateds =  _context.BookRelateds.FirstOrDefault(b => b.AuthorId == dbAuthor.Id);
+            _context.BookRelateds.Remove(bookRelateds);
             _context.Authors.Remove(dbAuthor);
             _context.SaveChanges();
             return StatusCode(202);

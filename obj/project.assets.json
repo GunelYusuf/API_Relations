@@ -5010,7 +5010,7 @@
       "outputPath": "/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gunelyusubova/.nuget/NuGet/NuGet.Config"
+        "/Users/gunelyusubova/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

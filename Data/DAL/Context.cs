@@ -17,5 +17,9 @@ namespace Web_API_Relations.Data.DAL
 
         public DbSet<Author> Authors { get; set; }
 
+        public DbSet<BookGenre> BookGenres { get; set; }
+
+        public DbSet<BookRelateds> BookRelateds { get; set; }
+
     }
 }
