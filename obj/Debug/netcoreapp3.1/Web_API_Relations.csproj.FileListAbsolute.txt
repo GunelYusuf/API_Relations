@@ -37,5 +37,4 @@
 /Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/obj/Debug/netcoreapp3.1/Web_API_Relations.dll
 /Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/obj/Debug/netcoreapp3.1/Web_API_Relations.pdb
 /Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/obj/Debug/netcoreapp3.1/Web_API_Relations.genruntimeconfig.cache
-/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/bin/Debug/netcoreapp3.1/Web_API_Relations
 /Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/obj/Debug/netcoreapp3.1/Web_API_Relations.csproj.AssemblyReference.cache
