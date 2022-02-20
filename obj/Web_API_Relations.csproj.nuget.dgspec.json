@@ -1,0 +1,89 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/Web_API_Relations.csproj": {}
+  },
+  "projects": {
+    "/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/Web_API_Relations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/Web_API_Relations.csproj",
+        "projectName": "Web_API_Relations",
+        "projectPath": "/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/Web_API_Relations.csproj",
+        "packagesPath": "/Users/gunelyusubova/.nuget/packages/",
+        "outputPath": "/Users/gunelyusubova/Projects/Web_API_Relations/Web_API_Relations/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gunelyusubova/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
